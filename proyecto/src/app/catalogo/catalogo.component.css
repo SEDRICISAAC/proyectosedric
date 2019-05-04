@@ -1,0 +1,57 @@
+.ejemplo {
+    width: 50%;
+}
+
+.derecha {
+    position: absolute;
+    top: 0%;
+    right: 30px;
+    bottom: 250px;
+    width: 50px;
+}
+
+button {
+    margin: 16px 8px;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+    background: #dd1c1c;
+}
+
+.example-container {
+    height: 400px;
+    width: 550px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+}
+
+th.mat-column-position, td.mat-column-position {
+    padding-left: 8px;
+}
+
+.mat-table-sticky:first-child {
+    border-right: 1px solid #c72121;
+}
+
+.mat-table-sticky:last-child {
+    border-left: 1px solid #cf1515;
+}
+body{
+    margin: 0;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+font{
+    background-position: center;
+    background-color: #c72121;
+}
+   
+    

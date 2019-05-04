@@ -1,0 +1,20 @@
+.example-tab-icon {
+    margin-right: 8px;
+}
+
+.espacio {
+    padding: 25px 50px 75px 100px;
+    border: 1px solid rgb(47, 48, 47);
+}
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image1 {
+    background-image: url('../../assets/icon/1485482192-phone_78665.png');
+    background-size: cover;
+  }
+  .example-header-image{
+    background-image: url('../../assets/icon/42483houses_98984.png');
+    background-size: cover;
+  }
