@@ -46,7 +46,7 @@ export class CatalogoComponent implements OnInit {
     ];
 
     this.asignacion=[
-
+    
     ] 
   }
 
@@ -54,6 +54,7 @@ export class CatalogoComponent implements OnInit {
     this.Servicios.get('asignaturas').subscribe(
         response => {
             this.data = response as Array<Asignaturas>;
+            console.log(this.data);
         },
         error => {
             console.log(error);
@@ -65,7 +66,6 @@ post(){
     this.Servicios.post('asignaturas',this.asignaturas).subscribe(
       response => {
         this.get();
-        console.log(this.get);
       },
       error => {
         console.log(error);
@@ -77,8 +77,8 @@ post(){
   verDatos() {
     this.verTabla = true;
     if (this.tablaSeleccionada == 0) {
-      this.nombreColumnas = Object.keys(this.asignacion[0]);
-      this.dataSource = new MatTableDataSource<Asignaturas>(this.asignacion);
+      this.nombreColumnas = Object.keys(this.data[0]);
+      this.dataSource = new MatTableDataSource<Asignaturas>(this.data);
       this.dataSource.paginator = this.paginator
       } else {
       this.verTabla = false;

@@ -16,6 +16,10 @@
     </div>
   </div>
 
+
+   
+
+
   <div class="cuer">
     <div *ngIf="verTabla" class="mat-elevation-z8">
 
@@ -32,61 +36,18 @@
       </div>
 
 
-      <!--insertar nuevas materias-->
-      <form>
-        <input [(ngModel)]="asignaturas.nombre" name="nombre" placeholder="Nombre de la Asignatura">
-        <div>
-          <div for="choose"> Carrera </div>
-          <div for="choose">
-            <select id="choose" [(ngModel)]="asignaturas.codigo_carrera" name="codigo_carrera" class="form-control">
-              <option value="1"> Desarrollo de Software </option>
-              <option value="2"> Gastronomia </option>
-              <option value="3"> Marketing </option>
-              <option value="4"> Diseño de Modas </option>
-              <option value="5"> Guianza Turistica </option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <div for="choose"> Malla </div>
-          <div for="choose">
-            <select id="choose" [(ngModel)]="asignaturas.id_malla" name="id_malla" class="form-control">
-              <option value="1"> Malla1 </option>
-              <option value="2"> Malla2 </option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <div for="choose"> Semestre </div>
-          <div for="choose">
-            <select id="choose" [(ngModel)]="asignaturas.cod_semestre" name="cod_semestre" class="form-control">
-              <option value="1"> Primero </option>
-              <option value="2"> Segundo </option>
-              <option value="3"> Tercero </option>
-              <option value="4"> Cuarto </option>
-              <option value="5"> Quinto </option>
-            </select>
-          </div>
-        </div>
-      </form>
-      
-    
-      
-      <button type="button"><a (click)="post(asignaturas)">GUARDAR</a></button>
-
-
-
+     
 
       <table mat-table [dataSource]="dataSource">
 
         <ng-container *ngFor="let columna of nombreColumnas" matColumnDef="{{columna}}">
           <th mat-header-cell *matHeaderCellDef> {{columna}} </th>
-          <td mat-cell *matCellDef="let element"> {{element[columna]}} </td>
+          <td mat-cell *matCellDef="let asignaturas"> {{asignaturas[columna]}} </td>
         </ng-container>
 
         <ng-container matColumnDef="star" stickyEnd>
           <th mat-header-cell *matHeaderCellDef></th>
-          <td mat-cell *matCellDef="let element">
+          <td mat-cell *matCellDef="let asignaturas">
             <mat-icon>more_vert</mat-icon>
           </td>
         </ng-container>

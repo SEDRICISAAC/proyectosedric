@@ -19,6 +19,7 @@ exports.up = function(knex, Promise) {
     }),
 
     knex.schema.createTable('malla', function(table) {
+        
         table.increments('id_malla').primary();
         table.date('fecha_implementacion');
         table.integer('codigo_carrera').references('codigo_carrera').inTable('carrera');
